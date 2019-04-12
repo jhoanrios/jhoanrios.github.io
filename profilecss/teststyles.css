@@ -1,0 +1,42 @@
+/*
+Name: jhoan rios
+Date Created: April 7, 2019
+Most recent revision:
+*/
+
+
+  
+header, footer {
+    background-color: darkgreen;
+    color: black;
+}
+
+
+/*#experience {
+    border: thick dashed yellow;
+}*/
+
+#hobbies {
+    border: thick dashed yellow;
+}
+
+#nav .btn {
+    background-color: green;
+        color: black;
+    border-top: thin #5b7d87 solid;
+    border-bottom: thin #5b7d87 solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+ 
+nav .btn:hover {
+    font-weight: : bold;
+}
+
+
+
+
+
+
+/*        <div style="background-color:rgb(178,31,40,0.8);">color i like</div>
+*/

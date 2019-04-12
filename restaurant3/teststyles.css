@@ -1,0 +1,10 @@
+@media type and (property:value) {
+ selector {
+ property:value;
+ property:value;
+ }
+ selector2{
+ property:value;
+ property:value;
+ }
+}
