@@ -31,11 +31,6 @@ if(email == ""){
   return false;
 }
 
-if(validateEmail(email) == false){
-  alert("Invalid E-mail address format");
-  document.forms["customerForm"]["email"].focus();
-  return false;
-}
 
 if(phone == "" || isNaN(phone)){
   alert("Please Enter a phone Number");
