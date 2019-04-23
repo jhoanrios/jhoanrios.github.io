@@ -1,10 +1,46 @@
-@media type and (property:value) {
- selector {
- property:value;
- property:value;
- }
- selector2{
- property:value;
- property:value;
- }
+body{
+background-image: url("images/b.jpg");
+background-size: 250px;
+back
+background-repeat: repeat;
+
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 150%;
+  color: #fef9ff;
+
 }
+
+
+
+
+.main-header {
+
+background-size: ;
+background-color: navajowhite;
+font-family: 'Ubuntu Condensed', sans-serif;
+margin-bottom:20px;
+
+}
+.title{
+
+  font-weight: bold;
+  color:black;
+  text-shadow: 1px 1px black;
+}
+
+.footer {
+  text-align: center;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: white;
+  border-top: 1px solid black;
+  margin-bottom:0;
+  border-bottom:30px solid white;
+    background-color: 0;
+}
+
+
+.background {
+  background-color: rgb(240,250,255)
+}
+
+
