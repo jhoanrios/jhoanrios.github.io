@@ -48,12 +48,11 @@ if(phone == "" || isNaN(phone)){
 
 
 
-alert("You Entered The following Info: " + "\nName: " + fname + " " + lname + "\n" + "Email: " + email + "\nPhone: " + phone);
+alert("Thank you");
 
 
 
 
-// document.getElementById("demo").innerHTML = "You Entered: "+ fname + " " + " " + lname + " " + " "  + " " + email + " "+ phone;
 
 
 
