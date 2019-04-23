@@ -66,25 +66,5 @@ margin:auto;
 }
 
 
-.grand {
-    display:inline-block;
-    
-}
 
-nav a {
-  display:inline-block;
-font-size: 1.5em;
-margin:10px -250px 0 430px;
-text-shadow: 1px 1px black;
-padding:10px;
-border-radius:7px;
-background-color: black;
-color: white;
-text-decoration: none;
-box-shadow: 1px 1px grey;
-}
 
-nav a:hover {
-  background-color:rgb(0,0,0,.5);
-    
-}
