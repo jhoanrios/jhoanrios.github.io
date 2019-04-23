@@ -44,3 +44,25 @@ margin-bottom:20px;
 }
 
 
+.carousel {
+  height: 50%;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 10px, 0px black;
+  max-width: 550px;
+}
+.carousel-indicators li {
+      height:10px !important;
+width:10px !important;
+    border-radius: 50%;
+  top:10px;
+}
+
+.slideshow {
+margin:auto;
+}
+.imgs {
+  width:100%;
+}
+
+
