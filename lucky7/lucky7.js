@@ -1,74 +1,65 @@
-function playGame() {
+var currentMoney = 0;
+var initialBet = 0;
+var numOfTotalRolls = 0;
 
-  var bet = Number(document.getElementById("bet").value);
-
-  if (bet == "" || isNaN(bet) || bet < 0) {
-    alert("Please enter a whole number greater than 0.");
-    //reset
-    document.getElementById("bet").value = null;
-    document.getElementById("bet").focus();
-
-    return;
-  } else {
-    // set block visibility
-    document.getElementById("resetButton").style.display =
-      "inline-block";
-    document.getElementById("submitButton").style.display =
-      "none";
-    document.getElementById("results").style.display =
-      "block";
-    //end of visibility
-
-    //variables for game
-    var gameMoney = bet;
-    var die1 = 0;
-    var die2 = 0;
-    var howManyRolls = 0;
-    var highestAmountWon = 0;
-    var highestRolls = 0;
-
-    //gameplay
-    while (gameMoney > 0) {
-      die1 = Math.floor((Math.random() * 6) + 1);
-      die2 = Math.floor((Math.random() * 6) + 1);
-      howManyRolls++;
-
-      if ((die1 + die2) == 7) {
-        gameMoney += 4;
-      } else gameMoney--;
-
-      if (gameMoney > highestAmountWon)
-      {
-        highestAmountWon = gameMoney;
-        highestRolls = howManyRolls;
-      }
-
-    } //end while loop
-
-    document.getElementById("betAmount").innerText = bet;
-    document.getElementById("totalRolls").innerText = howManyRolls;
-    document.getElementById("highestAmountWon").innerText = highestAmountWon;
-    document.getElementById("rollCountAtHighest").innerText = highestRolls;
-
-    document.getElementById("startingBet").style.display= "none";
-  } //end of else
+var maxMoneyWon = 0;
+var maxDiceRoll = 0;
 
 
 
-} //end of play game
 
-function resetGame() {
-  //visibility
-  document.getElementById("startingBet").style.display= "block";
+function rollDice(){
 
-  document.getElementById("submitButton").style.display =
-    "inline-block";
-  document.getElementById("resetButton").style.display =
-    "none";
-  document.getElementById("results").style.display =
-    "none";
-  //reset bet element and focus on it
-  document.getElementById("bet").value = null;
+var dice1 = Math.floor(Math.random() * 6) + 1;
+var dice2 = Math.floor(Math.random() * 6) + 1;
+var sum = dice1 + dice2;
+numOfTotalRolls ++;
+if(currentMoney > maxMoneyWon){
+  maxMoneyWon = currentMoney;
+  maxDiceRoll = numOfTotalRolls;
+}
+
+if(sum == 7){
+  currentMoney += 4;
+}else{
+  currentMoney -= 1;
+}
+console.log("currentMoney: " + currentMoney);
+console.log("current Roll" + numOfTotalRolls);
+}
+
+
+function validateItems(){
+var bet = parseInt(document.getElementById("bet").value);
+
+currentMoney = bet;
+maxMoneyWon = bet;
+initialBet = bet;
+
+if(bet == "" || isNaN(bet)){
+alert("Please enter a number");
+document.getElementById("bet").focus();
+return false;
+}
+
+if(Number(bet) <=0 ){
+  alert("Possitve bets Only please");
   document.getElementById("bet").focus();
+  return false;
+}
+
+while(currentMoney !==0 ){
+rollDice();
+}
+
+if(currentMoney == 0){
+document.getElementById("results").style.display = "block";
+document.getElementById("demo").innerHTML = "$" + initialBet;
+document.getElementById("demo2").innerHTML = numOfTotalRolls;
+document.getElementById("demo3").innerHTML = "$" + maxMoneyWon;
+document.getElementById("demo4").innerHTML = maxDiceRoll;
+}
+
+
 
 }
