@@ -20,7 +20,7 @@ header, footer {
     border: thick dashed yellow;
 }
 
-#nav .btn {
+nav .btn {
     background-color: green;
         color: black;
     border-top: thin #5b7d87 solid;
